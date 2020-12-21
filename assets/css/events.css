@@ -18,7 +18,7 @@
     bottom: 55px;
     border-radius: 50%;
     position: fixed;
-    background: linear-gradient(49deg, rgba(4,25,66,1) 18%, rgba(16,118,255,1) 100%);
+    background: linear-gradient(49deg, rgba(4, 25, 66, 1) 18%, rgba(16, 118, 255, 1) 100%);
     border: 0;
     color: white;
     font-size: 36px;
@@ -26,5 +26,5 @@
 }
 
 .addEvent:hover {
-    background: rgb(4,25,66);
+    background: rgb(4, 25, 66);
 }
