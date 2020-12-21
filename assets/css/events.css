@@ -4,9 +4,27 @@
     justify-content: center;
     width: 100%;
     background-color: #f1f2f6;
-    padding: 10px;
 }
 
 #events ul {
     list-style-type: none;
+}
+
+.addEvent {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    right: 10px;
+    bottom: 55px;
+    border-radius: 50%;
+    position: fixed;
+    background: linear-gradient(49deg, rgba(4,25,66,1) 18%, rgba(16,118,255,1) 100%);
+    border: 0;
+    color: white;
+    font-size: 36px;
+    transition: all .3s;
+}
+
+.addEvent:hover {
+    background: rgb(4,25,66);
 }
