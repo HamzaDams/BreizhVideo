@@ -1,3 +1,6 @@
+const urlString = window.location.search;
+const urlParametres = new URLSearchParams(urlString);
+
 function addVillage(form) {
 
     const village = {
@@ -34,7 +37,7 @@ function afficherVillages() {
             <tr>
                 <td>${el.name}</td>
                 <td>${el.postalCode}</td>
-                <td><button onclick='voirVillage(${el.id})'>Voir</button> | <button>Supprimer</button></td>
+                <td><button onclick='voirVillage(${el.id})'>Voir</button> | <button onclick='deleteVillage(${el.id})'>Supprimer</button></td>
             </tr>
         `)
             document.querySelector("#listeVillage").innerHTML = tableInfo;
@@ -57,4 +60,24 @@ function alertMessage(message) {
     setTimeout(() => {
         document.querySelector("#message").innerHTML = ""
     }, 2000);
+}
+
+function afficherVillageExistant() {
+    if (urlParametres.get('id') != null) {
+        fetch('http://localhost:8080/village/' + urlParametres.get('id'))
+            .then(response => response.json())
+            .then(data => {
+                document.querySelector("#name").value = data.name;
+                document.querySelector("#postalCode").value = data.postalCode;
+            })
+    }
+}
+
+afficherVillageExistant();
+
+function deleteVillage(villageId) {
+    fetch('http://localhost:8080/village/villages?id=' + villageId, {
+        method: 'DELETE'
+    })
+    document.location.reload();
 }
