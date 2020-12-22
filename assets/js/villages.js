@@ -81,3 +81,22 @@ function deleteVillage(villageId) {
     })
     document.location.reload();
 }
+
+function updateVillage(form) {
+
+    const village = {
+        name: form.name.value,
+        postalCode: form.postalCode.value
+    }
+
+    fetch('http://localhost:8080/village/villages/', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json, text/plain, */*',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id: +urlParametres.get('id'), name: village.name, postalCode: village.postalCode })
+    })
+
+    window.location.href = '/villages.html';
+}
