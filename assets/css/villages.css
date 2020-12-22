@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 5%;
 }
 
 table {
@@ -19,4 +20,10 @@ th {
 
 tr:nth-child(even) {
     background-color: #dddddd;
+}
+
+.addVillage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

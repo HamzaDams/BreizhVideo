@@ -52,12 +52,19 @@
         </section>
 
         <div class="formAddEvent">
-            <form action="">
+            <form>
                 <label>Lieu :</label>
-                <select name="pets" id="pet-select">
-                    <option value="">--Please choose an option--</option>
-                    <option value="dog">Test</option>
+                <select name="lieux" id="listLieux">
                 </select>
+
+                <label>Ajouter 5 films: :</label>
+                <select name="films" id="film">
+                </select>
+
+                <label for="releaseDate">Date :</label>
+                <input name="releaseDate" id="releaseDate" type="date">
+
+                <input type="submit" value="envoyer">
             </form>
         </div>
 
@@ -65,6 +72,8 @@
     <footer>
 
     </footer>
+
+    <script src="assets/js/app.js"></script>
 </body>
 
 </html>
