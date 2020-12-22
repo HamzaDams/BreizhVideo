@@ -21,26 +21,35 @@
 
     <section id="villages">
         <table>
-            <tr>
-                <th>Nom</th>
-                <th>Code Postal</th>
-                <th>Actions</th>
-            </tr>
-            <tr>
-                <td>Nantes</td>
-                <td>44000</td>
-                <td>test</td>
-            </tr>
-            <tr>
-                <td>Rennes</td>
-                <td>35000</td>
-                <td>test</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Code Postal</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="listeVillage">
+            </tbody>
+
         </table>
 
     </section>
-    <button class="addEvent">+</button>
 
+    <div class="addVillage">
+        <form onsubmit="addVillage(this); return false;">
+            <div id="message"></div>
+            <label for="name">Nom :</label>
+            <input type="text" name="name" id="name">
+
+            <label for="postalCode">Code postal :</label>
+            <input type="number" name="postalCode" id="postalCode">
+
+            <input type="submit" value="Envoyer">
+        </form>
+    </div>
+
+    <button class="addEvent">+</button>
+    <script src="assets/js/villages.js"></script>
 </body>
 
 </html>
